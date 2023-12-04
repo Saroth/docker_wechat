@@ -1,5 +1,5 @@
 # About
-用于在Linux平台运行微信机器人.
+用于在Linux平台运行微信机器人的Docker配置.
 *   运行环境: Docker, Wine, LXDE
 *   采用Hook方案, 参考资料: [WeChatFerry](https://github.com/lich0821/WeChatFerry)
 
@@ -38,9 +38,10 @@ $ sudo ./docker_run.sh
     开始常规安装流程. 完成后关闭.
 
 ## 启动应用
-1.  点击桌面图标``WeChatFerry``
-2.  在终端启动:
-    ```sh
-    $ ./launch.sh
-    ```
+*   进入桌面
+    1.  双击桌面图标``WeChatFerry``
+    2.  在终端启动:
+        ```sh
+        $ ./launch.sh
+        ```
 
