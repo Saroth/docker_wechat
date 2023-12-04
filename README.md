@@ -1,11 +1,11 @@
 # About
-用于在Linux平台运行微信机器人的Docker配置.
-*   运行环境: Docker, Wine, LXDE
-*   采用Hook方案, 参考资料: [WeChatFerry](https://github.com/lich0821/WeChatFerry)
+用于运行微信Hook的Docker配置.
+*   运行环境: Docker, Wine, LXDE, xRDP
+*   基于[WeChatFerry](https://github.com/lich0821/WeChatFerry)部署, thanks to [lich0821](https://github.com/lich0821/WeChatFerry/commits?author=lich0821)
 
 # Usage
 ## 获取资源
-在[Releases](https://github.com/lich0821/WeChatFerry/releases)
+在[Releases](https://github.com/Saroth/docker_wechat/releases)
 下载安装包``WeChatSetup``和工具包``v??.?.?.zip``, 放到工程目录``docker/res``
 
 ## 构建镜像
