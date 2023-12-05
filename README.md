@@ -1,6 +1,8 @@
 # About
 用于运行微信Hook的Docker配置.
 *   运行环境: Docker, Wine, LXDE, xRDP
+    -   LXDE: 轻量的桌面环境, 微信只能在图形界面下安装和运行.
+    -   xRDP: 用于从``Windows``远程连接桌面进行配置.
 *   基于[WeChatFerry](https://github.com/lich0821/WeChatFerry)部署, thanks to [lich0821](https://github.com/lich0821/WeChatFerry/commits?author=lich0821)
 
 # Usage
@@ -27,21 +29,23 @@ $ sudo ./docker_run.sh
 *   WeChatFerry消息端口: 8002, 映射到主机18002
 
 ## 安装应用
-*   启动Windows的``远程桌面连接``, 地址填写:``服务器IP:13389``, 点``连接(N)``;
-*   xRDP登录窗口, ``username``: root, ``password``: 123, 点``OK``;
-*   进入桌面
-    1.  双击桌面图标``WeChatSetup``
-    2.  在终端安装: 左下角启动终端``LXTerminal``, 执行:
+*   ``Windows``启动``远程桌面连接``, **地址**:``服务器IP:13389``;
+*   进入xRDP登录窗口, **username**: ``root``, **password**: ``123``;
+*   进入桌面, 启动安装程序. 提供2种方式:
+    1.  命令行启动: 左下角启动终端``LXTerminal``, 执行:
         ```sh
         $ wine res/WeChatSetup-3.9.2.23.exe
         ```
-    开始常规安装流程. 完成后关闭.
+    2.  新增快捷方式启动: 双击桌面图标``WeChatSetup``
+
+开始常规安装流程. 完成安装后关闭.
 
 ## 启动应用
-*   进入桌面
-    1.  双击桌面图标``WeChatFerry``
-    2.  在终端启动:
+*   进入桌面, 启动应用. 提供2种方式:
+    1.  命令行启动:
         ```sh
         $ ./launch.sh
         ```
+    2.  新增快捷方式启动: 双击桌面图标``WeChatFerry``
+*   登录后关闭远程
 
