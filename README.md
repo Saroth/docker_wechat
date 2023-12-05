@@ -47,5 +47,9 @@ $ sudo ./docker_run.sh
         $ ./launch.sh
         ```
     2.  新增快捷方式启动：双击桌面图标``WeChatFerry``
+*   微信常规配置，左下角Settings：
+    -   Notifications：关闭所有
+    -   General -> General：不选所有
+    -   Manage Files -> Auto-Download：不选
 *   启动并登录后，直接关闭远程桌面，不要``Logout``。因为登出后图形界面下运行的所有程序都会退出。
 
