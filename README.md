@@ -5,8 +5,8 @@
     -   xRDP：用于从``Windows``远程连接桌面进行配置。
 *   基于[WeChatFerry](https://github.com/lich0821/WeChatFerry)部署，thanks to [lich0821](https://github.com/lich0821/WeChatFerry/commits?author=lich0821)
 *   资源使用情况：
-    -   内存：微信和相关服务使用约2.3G；
-    -   磁盘：镜像大小6.95G。前期容器小于1G，长期使用将持续扩大；
+    -   磁盘：构建的镜像大小约4.6G。安装微信后达到7G，长期使用将持续扩大；
+    -   内存：启动微信后MEM USAGE：1.86G；
 
 # Usage
 ## 获取资源
@@ -55,4 +55,7 @@ $ sudo ./docker_run.sh
     -   General -> General：不选所有
     -   Manage Files -> Auto-Download：不选
 *   启动并登录后，直接关闭远程桌面，不要``Logout``。因为登出后图形界面下运行的所有程序都会退出。
+
+## 测试
+在主机运行测试脚本：``./test/test_wcferry.py``，消息默认发送给``文件传输助手``。
 
