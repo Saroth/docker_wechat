@@ -13,6 +13,8 @@
 在[Releases](https://github.com/Saroth/docker_wechat/releases)
 下载安装包``WeChatSetup``和工具包``v??.?.?.zip``，放到工程目录``docker/res``。
 
+**WeChatFerry迭代频繁，最新版本[![PyPi](https://img.shields.io/pypi/v/wcferry.svg)](https://pypi.python.org/pypi/wcferry)在[WeChatFerry-Release](https://github.com/lich0821/WeChatFerry/releases)获取**。
+
 ## 构建镜像
 ```sh
 $ cd docker

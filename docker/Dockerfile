@@ -1,6 +1,6 @@
 # FROM fedora:latest
 FROM fedora:39
-LABEL describe="Fedora for WeChat hook, base on LXDE, Wine, Xrdp."
+LABEL describe="Fedora for WeChat hook, base on LXDE, Wine, xRDP, WeChatFerry."
 
 WORKDIR /root
 RUN dnf update -y \
