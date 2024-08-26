@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=WeChat
+Type=Application
+Exec=env WINEPREFIX="/root/.wine" wine /root/.wine/drive_c/Program\\ Files/Tencent/WeChat/WeChat.exe
+StartupNotify=true
+Path=/root/res
+Icon=E282_WeChat.0

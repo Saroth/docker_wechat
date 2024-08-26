@@ -1,21 +1,21 @@
 # FROM fedora:latest
-FROM fedora:39
-LABEL describe="Fedora for WeChat hook, base on LXDE, Wine, xRDP, WeChatFerry."
+FROM fedora:40
+LABEL describe="Fedora for WeChat, base on LXDE, Wine, xRDP, WeChatFerry."
 
 WORKDIR /root
-RUN dnf update -y \
-        && dnf groupinstall -y "LXDE" \
+RUN dnf groupinstall -y "LXDE" \
         && dnf install -y wine \
         && dnf install -y xrdp \
         && dnf clean all
 
 COPY ./res ./res
+COPY ./package/v*.zip ./res
 
 RUN echo "root:123" | chpasswd \
         && mkdir ~/Desktop \
         && mv res/*.desktop ~/Desktop \
-        && mv res/*.sh . \
-        && unzip -o res/v*.zip -d res
+        && unzip -o res/v*.zip -d res \
+        && rm res/v*.zip
 
 # Port for xRDP
 EXPOSE 3389
@@ -24,6 +24,6 @@ EXPOSE 8001
 # Port for WeChatFerry message
 EXPOSE 8002
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["./res/entrypoint.sh"]
 CMD ["bash"]
 

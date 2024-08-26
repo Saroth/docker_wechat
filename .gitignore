@@ -1,8 +1,6 @@
 # Editor
-*.vimproject
-.exvim.*/
 
 # Resource
-docker/res/WeChatSetup-*.exe
-docker/res/v*.zip
+/package/
+/wechat/
 
