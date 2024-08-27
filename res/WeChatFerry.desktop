@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=WeChatFerry
 Type=Application
-Exec=env WINEPREFIX="/root/.wine" wine /root/res/wcf.exe start 8001
-# Exec=lxterminal --command "env WINEPREFIX="/root/.wine" wine /root/res/wcf.exe start 8001"
+Exec=/bin/bash /root/res/launch.sh
+# Exec=lxterminal --command "/bin/bash /root/res/launch.sh"
 StartupNotify=true
 Path=/root/res
 Icon=E282_WeChat.0

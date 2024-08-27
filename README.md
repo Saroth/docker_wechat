@@ -1,6 +1,6 @@
 # About
 用于运行微信Hook的Docker配置。
-*   运行环境：Docker、Wine、LXDE、xRDP
+*   容器运行环境：Docker、Wine、LXDE、xRDP
     -   LXDE：轻量的桌面环境，微信只能在图形界面下安装和运行。
     -   xRDP：用于从``Windows``远程连接桌面进行配置。
 *   基于[WeChatFerry](https://github.com/lich0821/WeChatFerry)部署，thanks to [lich0821](https://github.com/lich0821/WeChatFerry/commits?author=lich0821)
@@ -11,8 +11,8 @@
         -   微信安装后，初始状态占用1.41G；
         -   微信长期使用，磁盘占用会持续增加；
     -   内存：
-        -   桌面登录后，总占用165M；
-        -   微信启动并登录后，总占用1.86G；
+        -   桌面登录后，总占用194M；
+        -   微信启动并登录后，总占用4.24G；
 
 # Usage
 ## 获取资源
@@ -45,7 +45,7 @@ $ sudo ./docker/docker_run.sh
     -   程序文件： ``./wechat/program`` => ``/root/.wine/drive_c/Program\ Files/Tencent/WeChat``
     -   图标文件： ``./wechat/share/icons`` => ``/root/.local/share/icons``
     -   用户数据： ``./wechat/user_dat`` => ``/root/.wine/drive_c/users/root/AppData/Roaming/Tencent/WeChat``
-    -   **将程序和用户数据目录挂载到宿主机，在容器删除并重启后，避免再次安装程序**。
+    -   **将程序和用户数据目录挂载到宿主机，可避免在容器重置后再次安装程序**。
 
 ## 安装应用
 *   ``Windows``启动``远程桌面连接``，**地址**：``服务器IP:13389``
@@ -76,7 +76,9 @@ $ sudo ./docker/docker_run.sh
 在主机运行测试脚本：``./test/test_wcferry.py``，消息默认发送给``文件传输助手``。
 
 # FAQ
-## 关于版本
+## 关于版本兼容
 
-## 关于各种运行异常
+## 关于启动异常
+
+## 关于闪退
 
