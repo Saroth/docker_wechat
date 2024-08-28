@@ -21,7 +21,7 @@ if [ $? -ne 0 ]; then
   fi
   echo "Init regedit"
   notify-send "WeChatFerry" "发现注册表备份文件，还原注册表"
-  import_reg="wine regedit /s ./wechat.reg"
+  import_reg="wine regedit /s $reg_file"
   eval $import_reg
 elif [ ! -f "$reg_file" ]; then
   echo "备份注册表"

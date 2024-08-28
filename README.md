@@ -1,5 +1,5 @@
 # About
-用于运行微信Hook的Docker配置。
+这是一个在Linux系统下，使用容器运行微信的方案。
 *   容器运行环境：Docker、Wine、LXDE、xRDP
     -   LXDE：轻量的桌面环境，微信只能在图形界面下安装和运行。
     -   xRDP：用于从``Windows``远程连接桌面进行配置。
@@ -7,28 +7,28 @@
 *   资源使用情况：
     -   磁盘：
         -   构建后镜像大小约4.63G；
-        -   Wine第一次启动，自动初始化后占用1.49G；
-        -   微信安装后，初始状态占用1.41G；
+        -   Wine第一次启动，自动初始化后容器占用1.49G；
+        -   微信安装后，初始状态占用1.41G。
+            默认配置已将这部分文件放到宿主机的挂载目录；
         -   微信长期使用，磁盘占用会持续增加；
     -   内存：
         -   桌面登录后，总占用194M；
-        -   微信启动并登录后，总占用4.24G；
+        -   微信启动，总占用约1.7G，微信登录后，总占用约**4.9G**。
+            宿主机需要预留充足的内存空间；
 
 # Usage
 ## 获取资源
-在[Releases](https://github.com/Saroth/docker_wechat/releases)
+在[Releases](](https://github.com/lich0821/WeChatFerry/releases)
 下载安装包``WeChatSetup``和工具包``v??.?.?.zip``，放到工程目录``/package``。
 
-**WeChatFerry迭代频繁，最新版本[![PyPi](https://img.shields.io/pypi/v/wcferry.svg)](https://pypi.python.org/pypi/wcferry)在[WeChatFerry-Release](https://github.com/lich0821/WeChatFerry/releases)获取**。
+WeChatFerry迭代频繁，当前**最新版本是![PyPi](https://img.shields.io/pypi/v/wcferry.svg)**
 
 ## 构建镜像
 ```sh
 $ sudo ./docker/docker_build.sh
 ```
 
-关于``Dockerfile``:
--   使用``root``作为xRDP默认用户。
--   ``root``默认密码为``123``，请按需修改。
+*   默认使用``root``作为xRDP用户。默认密码为``123``，请按需修改。
 
 ## 启动镜像
 ```sh
@@ -53,7 +53,7 @@ $ sudo ./docker/docker_run.sh
 *   进入桌面，启动安装程序。有2种启动方式：
     1.  命令行启动：左下角启动终端``LXTerminal``，执行：
         ```sh
-        $ wine package/WeChatSetup-3.9.10.27.exe
+        $ wine package/WeChatSetup-*.exe
         ```
     2.  桌面快捷方式启动：双击桌面图标``WeChatSetup``
 
