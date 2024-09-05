@@ -1,13 +1,6 @@
 #!/usr/bin/python
 # 此脚本仅用于连通测试
 
-import atexit
-import ctypes
-import os
-from queue import Queue
-import pynng
-import logging
-from time import sleep
 import datetime
 from wcferry import Wcf
 
