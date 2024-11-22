@@ -4,7 +4,7 @@
     -   LXDE：轻量的桌面环境，微信只能在图形界面下安装和运行。
     -   xRDP：用于从``Windows``远程连接桌面进行配置。
 *   基于[WeChatFerry](https://github.com/lich0821/WeChatFerry)部署，
-    thanks to [lich0821](https://github.com/lich0821/WeChatFerry/commits?author=lich0821)
+    thanks to [lich0821](https://github.com/lich0821)
 *   资源使用情况：
     -   磁盘：
         -   构建后镜像大小约4.69G；
